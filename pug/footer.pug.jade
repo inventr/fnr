@@ -1,0 +1,17 @@
+mixin foot(x)
+  .column
+    .borde.pl-1em COMMUNITY
+    each val in x
+      .pl-1em
+        a.a(href="#") #{val}
+footer.footer
+  .columns
+    .column
+      img(src="")
+      h3 CORPORACION NAVARRO RIVAS FNR S.A
+      p.mini San Jose avenida segunda calle 6 edificio Jiménez Crespo quinto piso
+      p.cell #[strong.cell Tlf:] 8503-7338 ·  #[strong.cell Fax:] 4700-2255
+    .column
+      .columns
+        +foot(["Tech Blog","shop","Press"])
+        +foot(["Jobs","Contact","Partners"])

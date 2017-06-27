@@ -1,0 +1,21 @@
+.footer{
+  background-color: #d8d8d8;
+  color: $foot;
+  & > h3{
+    @include textos(em(20px),normal,$foot,3.25);
+    letter-spacing: 0.2px;
+  }
+  & > .mini{
+    @include textos(em(20px),normal,$foot,3.25);
+    letter-spacing: 0.2px;
+  }
+}
+
+.a{
+  @include textos(em(15.4px),normal,$p1,1.63);
+  letter-spacing: .1px;
+}
+
+.cell{
+  color: $rojo!important;
+}

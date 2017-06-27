@@ -1,0 +1,23 @@
+mixin section1(img,title,p)
+  .columns
+    .column
+      img(src="#{img}")
+        
+    .column
+      h2.titles.borde.pl-1em #{title}
+      .pl-1em
+        p.ps.mb-2em.pl-1em #{p}
+        +servicios(["Alarmas","Equipos CCTV","Monitoreo"])
+        +servicios(["Sensores de panico","Detectores de Metales","Control de Marcas"])
+      div.leer Leer Más
+        
+mixin section2(img,title,p)
+  .columns
+    .column
+      h2.titles.borde.pl-1em #{title}
+      .pl-1em
+        p.ps.mb-2em.pl-1em #{p}
+      .leer.leer2 Leer Más
+
+    .column
+      img(src="#{img}")

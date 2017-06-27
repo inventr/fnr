@@ -1,0 +1,105 @@
+@import "vars";
+@import "mixins";
+@import "margenes";
+
+body{
+  font-family: font37300, sans-serif;
+}
+
+.background{
+  position: absolute;
+  height:772px;
+}
+
+.fondo{
+  @include fondo(em(772px),"../img/banner.jpg",flex-start,flex-end,$blanco);
+  background-attachment: fixed;
+  padding: 0px 0px 3em 3em;
+}
+
+.in-fondo{
+  position: relative;
+  width: 57%;
+  & > h2{
+    @include textos(2.6125em,bold,$blanco,1.27);
+  }
+  & > p{
+    @include textos(em(20px),300,$blanco,2.25);
+  }
+}
+
+.titles{
+  @include textos(em(30px),normal,$p1,2.17);
+  letter-spacing: .3px;
+}
+
+.ps{
+  @include textos(em(18px),normal,$p2,1.44);
+}
+
+.borde-ancho{
+  border-left: solid 3em $rojo;
+  padding-left: 1em;
+}
+
+.borde{ border-left: solid em(6px) $rojo; }
+
+.post-nav{
+  color: $azul;
+}
+
+.leer{
+  color: $azul;
+  cursor: pointer;
+  margin-top: 28%;
+}
+
+.leer2{ margin-top: 40%; }
+
+.nosotros{
+  @include textos(em(25px),normal,$p1,initial);
+  letter-spacing: 0.2px;
+  text-align: center;
+  padding: 0px 2em;
+}
+
+.box-red{
+  background-color: $rojo;
+  @include textos(em(20px),normal,$blanco,initial);
+  letter-spacing: .2px;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+
+.box-gris{
+  background-color: #f1f1f1;;
+  @include textos(em(20px),normal,$p1,initial);
+  letter-spacing: .2px;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+
+.active{
+  color: $active!important;
+}
+
+.center{
+  text-align: center;
+}
+
+.columns{
+  padding-left: 2em;
+}
+
+.boton{
+  background-color: $blanco;
+  border-color: transparent;
+  color: #7f7b7b;;
+  margin-left: 20%;
+  width: 50%;
+  min-width: 300px;
+  border-radius: 0px;
+  font-size: em(25px);
+}
+
+@import "foot";

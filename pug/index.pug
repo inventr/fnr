@@ -1,0 +1,53 @@
+//output:../index.html
+- var p1 = "El crecimiento ordenado y solido ha permitido la aceptación de nuestra empresa dentro del mercado costarricense de la seguridad, Empresarial y comercial."
+- var p2 = "Todo nuestros personal tanto administrativo como operativo es capacitado progresivamente cada 6 meses en Cursos Básicos de Seguridad, manejo de armas, manejo de crisis, y todas las técnicas policiales para un excelente servicio."
+- var p3 = "Para su representada contamos con Oficiales con amplia experiencia en Seguridad comercial, Seguridad Bancaria y seguridad Corporativa."
+- var p4 = "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu."
+- var nosotros = "Nuestra empresa, presentará cada mes la certificación de la CCSS, lo que probará que se encuentra al día, además las pólizas del INS las cuales son requisitos del Ministerio de Seguridad Publica, para toda Empresa que brinde Servicios de Seguridad Privada. "
+
+mixin servicios(x)
+  .columns
+    each val in x
+      .column
+        a(href="#",class="post-nav") #{val}
+        
+
+include sections.pug.jade
+include header.pug.jade
+body
+  img(src="img/rectangle-2.png", class="background")
+  div.fondo
+    .in-fondo
+      h2 ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia.
+      p ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia. Vivamus facilisis
+      a.button.boton Nuestros Servicios
+      
+  br
+  .columns
+    .column
+      h1.titles.mb-2em CORPORACION FNR
+      p.ps.mb-2em #{p1}
+      p.borde-ancho.mb-2em #{p2}
+      p.borde-ancho.mb-2em #{p3}
+
+    .column
+      img(src="img/img1.jpg")
+        
+  +section1("img/img2.jpg","SEGURIDAD ELECTRONICA",p4)
+  +section2("img/img3.jpg","SEGURIDAD FISICA",p4)
+  +section1("img/img4.jpg","SEGURIDAD ELECTRONICA",p4)
+  +section2("img/img5.jpg","SEGURIDAD FISICA",p4)
+  
+  p.nosotros #{nosotros}
+  br
+  .columns
+    .column
+      p.ps.box-gris Contamos con Póliza Riesgos Laborales emitida por el INS. 
+      p.ps.box-gris Contamos con la Póliza de Responsabilidad Civil ( Daño, lesión y muerte).
+    .column
+      .box-red.center Contamos con el Seguro de la Caja Costarricense de Seguro Social (C.C.S.S.). 
+      .box-red.center Cada uno de Nuestros Oficiales destacado en el cliente será debidamente investigados, tanto Judicial como socialmente. 
+  
+  
+
+  include footer.pug.jade
