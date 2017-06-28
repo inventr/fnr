@@ -8,11 +8,24 @@ body{
 
 .background{
   position: absolute;
-  height:772px;
+  height:600px;
+  width: 100%;
+}
+
+.background2{
+  position: absolute;
+  left: 1em;
+  top: 1em;
+}
+
+.cell-container{
+  position: relative;
+  top: 2em;
+  left: 30%;
 }
 
 .fondo{
-  @include fondo(em(772px),"../img/banner.jpg",flex-start,flex-end,$blanco);
+  @include fondo(em(600px),"../img/banner.jpg",flex-start,flex-end,$blanco);
   background-attachment: fixed;
   padding: 0px 0px 3em 3em;
 }
@@ -24,7 +37,7 @@ body{
     @include textos(2.6125em,bold,$blanco,1.27);
   }
   & > p{
-    @include textos(em(20px),300,$blanco,2.25);
+    @include textos(em(20px),300,$blanco,1.3);
   }
 }
 
@@ -34,7 +47,7 @@ body{
 }
 
 .ps{
-  @include textos(em(18px),normal,$p2,1.44);
+  @include textos(1.070em,normal,$p2,1.44);
 }
 
 .borde-ancho{
@@ -57,15 +70,22 @@ body{
 .leer2{ margin-top: 40%; }
 
 .nosotros{
-  @include textos(em(25px),normal,$p1,initial);
+  @include textos( 1.4625em,normal,$p1,initial);
   letter-spacing: 0.2px;
   text-align: center;
   padding: 0px 2em;
 }
 
+.box-container{
+  height: 100px;
+  max-height: 128px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .box-red{
   background-color: $rojo;
-  @include textos(em(20px),normal,$blanco,initial);
+  @include textos( 1.15em,normal,$blanco,initial);
   letter-spacing: .2px;
   padding: 1em 2em;
   margin-bottom: 1em;
@@ -73,7 +93,7 @@ body{
 
 .box-gris{
   background-color: #f1f1f1;;
-  @include textos(em(20px),normal,$p1,initial);
+  @include textos( 1.15em,normal,$p1,initial);
   letter-spacing: .2px;
   padding: 1em 2em;
   margin-bottom: 1em;
@@ -88,7 +108,7 @@ body{
 }
 
 .columns{
-  padding-left: 2em;
+  padding: 0px 2em;
 }
 
 .boton{
@@ -103,3 +123,15 @@ body{
 }
 
 @import "foot";
+@import "foot-modal";
+
+@media(max-width:em(768px)){
+    .img{display: none;}
+   .in-fondo{
+     width: auto;
+     & > h2{
+       font-size: 2.125em;
+     }
+   }
+   .boton{margin: 0px;}
+ }

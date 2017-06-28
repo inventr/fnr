@@ -2,52 +2,53 @@
 - var p1 = "El crecimiento ordenado y solido ha permitido la aceptación de nuestra empresa dentro del mercado costarricense de la seguridad, Empresarial y comercial."
 - var p2 = "Todo nuestros personal tanto administrativo como operativo es capacitado progresivamente cada 6 meses en Cursos Básicos de Seguridad, manejo de armas, manejo de crisis, y todas las técnicas policiales para un excelente servicio."
 - var p3 = "Para su representada contamos con Oficiales con amplia experiencia en Seguridad comercial, Seguridad Bancaria y seguridad Corporativa."
-- var p4 = "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu."
+- var p4 = "Esta seguridad es ejercida sólo por personal autorizado y capacitado para actuar en caso de ver algo irregular, no es un trabajo que pueda dejarse en manos inexpertas. Ofrecemos la venta de alarmas, instalación de equipos CCTV, monitoreo, sensores de pánico, detectores de metales, y control de marcas."
+- var p5 = "La seguridad física es un gran servicio dado por oficiales altamente calificados para vigilar todos los movimientos, en el caso de comercios pequeños o grandes, ellos vigilaran tanto a los empleados, como a compradores, movimientos de mercancías, entrada y salida de vehículos y mucho más."
+- var p6 = "Para la seguridad de residencias o condominios, entidades bancarias y bodegas, la aplicación es la misma. Ellos cuentan con un nivel de desarrollo y capacitación de alto impacto para prevenir o solventar cualquier riesgo o problema que se presente, cualquiera sea el caso."
+- var p7 = "Para el horario nocturno se refuerza notablemente la vigilancia. También aplicamos la utilización de equipos esenciales para prestar un mejor servicio, esto es a cualquier hora del día."
+- var p8 = "Es nuestra labor realizar los estudios de seguridad y optimización que se enfoquen en lo que el cliente solicite y necesite. Poseemos también la capacitación de extinguidores, y en cuanto al peligro físico que los empleados o dueños de cualquier tipo de empresa o conjunto residencial puedan estar expuestos, contamos con clases de defensa personal, aunado a ello y en caso de requerirse, ayuda psicológica."
+- var p9 = ["En F.N.R contamos con otras opciones para aumentar la seguridad si así lo requiere el cliente, como patrullaje motorizado, torres aéreas, segwey, y carro golf. Todo sujeto a selección. Nuestro equipo brinda seguridad las 24 horas del día, los 365 días del año, sea cual sea el servicio contratado. En lo que ha patrullaje motorizado nos referimos, es la acción de realizar recorridos con la finalidad de proteger las entidades físicas y a los civiles de cualquier hecho irregular, y así garantizar el buen orden y la correcta convivencia del lugar."]
+- var ps = [p5,p6,p7]
 - var nosotros = "Nuestra empresa, presentará cada mes la certificación de la CCSS, lo que probará que se encuentra al día, además las pólizas del INS las cuales son requisitos del Ministerio de Seguridad Publica, para toda Empresa que brinde Servicios de Seguridad Privada. "
-
-mixin servicios(x)
-  .columns
-    each val in x
-      .column
-        a(href="#",class="post-nav") #{val}
-        
 
 include sections.pug.jade
 include header.pug.jade
 body
   img(src="img/rectangle-2.png", class="background")
+  img(src="img/logo.png", class="background2")  
   div.fondo
     .in-fondo
-      h2 ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia.
-      p ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia. Vivamus facilisis
-      a.button.boton Nuestros Servicios
+      h2 En CORPORACIÓN F.N.R queremos ser tu tranquilidad, la de tu trabajo y los tuyos.
+      p Minimiza los riesgos y  elimina las preocupaciones,  encuentra la seguridad con nosotros.
+      a.button.boton.click Contactenos
       
   br
-  .columns
+  .columns.mb-4em
     .column
-      h1.titles.mb-2em CORPORACION FNR
-      p.ps.mb-2em #{p1}
-      p.borde-ancho.mb-2em #{p2}
-      p.borde-ancho.mb-2em #{p3}
+      h1.titles CORPORACIÓN FNR
+      p.ps.mb-1em #{p1}
+      p.borde-ancho.mb-5em #{p2}
+      p.borde-ancho #{p3}
 
     .column
-      img(src="img/img1.jpg")
+      img.img(src="img/img1.jpg")
         
-  +section1("img/img2.jpg","SEGURIDAD ELECTRONICA",p4)
-  +section2("img/img3.jpg","SEGURIDAD FISICA",p4)
-  +section1("img/img4.jpg","SEGURIDAD ELECTRONICA",p4)
-  +section2("img/img5.jpg","SEGURIDAD FISICA",p4)
-  
-  p.nosotros #{nosotros}
+  +section1("img/img2.jpg","SEGURIDAD ELECTRÓNICA",p4,true)
+  +section2("img/img3.png","SEGURIDAD FÍSICA",ps)
+  +section1("img/img4.jpg","ASESORÍA TÉCNICA",p8,false)
+  +section2("img/img5.png","VALORES AGREGADOS",p9)
+
+  p.nosotros.mt-2em #{nosotros}
   br
   .columns
     .column
-      p.ps.box-gris Contamos con Póliza Riesgos Laborales emitida por el INS. 
-      p.ps.box-gris Contamos con la Póliza de Responsabilidad Civil ( Daño, lesión y muerte).
+      p.ps.box-container.box-gris.center Contamos con Póliza Riesgos Laborales emitida por el INS. 
+      p.ps.box-container.box-gris.center Contamos con la Póliza de Responsabilidad Civil ( Daño, lesión y muerte).
     .column
-      .box-red.center Contamos con el Seguro de la Caja Costarricense de Seguro Social (C.C.S.S.). 
-      .box-red.center Cada uno de Nuestros Oficiales destacado en el cliente será debidamente investigados, tanto Judicial como socialmente. 
+      .box-container.box-red.center Contamos con el Seguro de la Caja Costarricense de Seguro Social (C.C.S.S.). 
+      .box-container.box-red.center Cada uno de Nuestros Oficiales destacado en el cliente será debidamente investigados, tanto Judicial como socialmente. 
   
-  
-
   include footer.pug.jade
+  include modal.pug.jade
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript")
+  script(src="js/index.js" type="text/javascript")

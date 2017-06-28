@@ -1,12 +1,14 @@
 .footer{
+  padding-bottom: 0px;
   background-color: #d8d8d8;
   color: $foot;
   & > h3{
     @include textos(em(20px),normal,$foot,3.25);
     letter-spacing: 0.2px;
+    margin-bottom: .5em;
   }
   & > .mini{
-    @include textos(em(20px),normal,$foot,3.25);
+    @include textos(em(14px),normal,$foot,3.25);
     letter-spacing: 0.2px;
   }
 }
@@ -18,4 +20,8 @@
 
 .cell{
   color: $rojo!important;
+}
+
+.mini{
+  font-size:em(13px);
 }

@@ -1,0 +1,61 @@
+.modal-content{ background-color: $blanco; }
+
+.fondo-modal{
+  @include fondo(em(300px),"../img/banner.jpg",center,center,$blanco);
+  & > * {
+    width: 70%;
+  }
+  & > p{
+    position: relative;
+    top: 28%;
+  }
+}
+
+
+.background-modal{
+  position: absolute;
+  height: 300px;
+  width: 100%;
+}
+
+.background2-modal{
+  position: absolute;
+  left: 35%;
+  top: 2%;
+}
+
+.control{
+  @include textos( .90em,300,$p1,initial);
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2em;
+  padding: 0px 2em;
+  & > input{
+    width: 45%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    border: solid 1px #979797;
+    height: em(52px);
+  }
+  & > label{
+    padding-top: 1em;
+    width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.foot-modal{
+  padding: 1em 0px;
+  display: flex;
+  justify-content: space-around;
+  border-top: solid 1px #979797;
+  & > a{
+    width: 25%;
+    border-radius: 9px;
+    background-color: $rojo;
+    height: 50px;
+    color: $blanco;
+    font-weight: bold;
+  }
+}
